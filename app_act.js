@@ -9,8 +9,8 @@ assessButton.onclick = function() {
     const username1 = nameInput1.value;
     const username2 = nameInput2.value;
     if(username1.length == 0 || username2.length == 0) return;
-    console.log(username1);
-    console.log(username2);
+//     console.log(username1);
+//     console.log(username2);
 
     // 診断結果エリアのクリア
     while(resultDiv.firstChild) resultDiv.removeChild(resultDiv.firstChild);
