@@ -28,11 +28,11 @@ assessButton.onclick = function() {
 
 
 const words = [
+    'さいこう！',
     'すごい！',
-    'いいね！',
-    'まぁまぁだね',
-    'うーむ...',
-    '...う笑'
+    'まぁよさそう！',
+    'まぁまぁかな...',
+    '...うにゅ、こんな日もある。'
 ];
 
 /**
@@ -46,15 +46,16 @@ function assess(name1, name2) {
     let SumOfCharCode2 = 0;
     for(let i = 0; i < name1.length; ++i) SumOfCharCode1 += name1.charCodeAt(i);
     for(let i = 0; i < name2.length; ++i) SumOfCharCode2 += name2.charCodeAt(i);
-    let P = SumOfCharCode1 * SumOfCharCode2;
-    const res = P%100;
+    let CurrentTime = new date.now();
+    let P = CurrentTime / (SumOfCharCode1 * SumOfCharCode2);
+    const res = P%101;
     let idx = -1;
     if(80 < res) idx = 0;
     else if(60 < res) idx = 1;
     else if(40 < res) idx = 2;
     else if(20 < res) idx = 3;
     else idx = 4;
-    return name1 + 'と' + name2 + 'の相性レベルは' + res + '!\n' + words[idx];
+    return '今日の' + name1 + 'と' + name2 + 'の相性レベルは' + res + '!\n' + words[idx];
 }
 
 }
