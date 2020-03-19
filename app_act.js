@@ -46,8 +46,8 @@ function assess(name1, name2) {
     let SumOfCharCode2 = 0;
     for(let i = 0; i < name1.length; ++i) SumOfCharCode1 += name1.charCodeAt(i);
     for(let i = 0; i < name2.length; ++i) SumOfCharCode2 += name2.charCodeAt(i);
-    let CurrentTime = new date.now();
-    let P = CurrentTime / (SumOfCharCode1 * SumOfCharCode2);
+    let CurrentTime = new date();
+    let P = CurrentTime.now() / (SumOfCharCode1 * SumOfCharCode2);
     const res = P%101;
     let idx = -1;
     if(80 < res) idx = 0;
